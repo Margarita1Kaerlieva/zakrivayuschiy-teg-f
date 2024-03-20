@@ -17,4 +17,42 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-family), sans-serif;
+  font-variation-settings: var(--font-weight-heading);
+  color: var(--accent-color);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-block-start: 100px;
+}
+
+/* .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: 2px solid var(--accent-color);
+  min-height: 327px;
+  font-family: var(--font-family-new);
+} */
+
+.header {
+  display: grid;
+  min-height: 327px;
+  outline: 2px solid var(--accent-color);
+  font-family: var(--font-family-new);
+  text-transform: uppercase;
+}
+
+.header_title {
+  font-size: var(--font-size);
+}
+
+.header_text {
+  font-size: var(--font-text);
+}
+
+.header__theme-menu {
+  font-size: var(--font-text);
 }
