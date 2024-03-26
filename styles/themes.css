@@ -7,14 +7,22 @@
 :root.theme-light {
     --font-family: Inter;
     --font-family-new: PressStart2P;
-    --font-weight-text: 700;
-    --font-weight-heading: 400;
+    --font-weight-text: 400;
+    --font-weight-heading: 700;
     --background-color: #FFFFFF;
     --accent-color: #000000;
+    --color-sparks: #FF0000;
+    --text-shadow: rgba(255, 255, 255, 1);
     --font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-    --font-text: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211, 211, 211 / 0) 2px 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211, 211, 211 / 0) 2px 4px), 
+    /* 49px-65px */
+    --font-text: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); 
+    /* 14px-23px */
+    --font-content: clamp(1.125rem, 1.059rem + 0.2817vw, 1.3125rem);
+    /* 18px-21px */
+    --clamp-margin: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
+    /* 120px-136px */
+    --background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), 
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
@@ -23,8 +31,9 @@
     --font-weight-heading: 785;
     --background-color: #000000;
     --accent-color: #00CC14;
-    --background-image: repeating-linear-gradient(to right, #000 0 2px, rgb(0, 0, 0 / 0) 2px 4px),
-    repeating-linear-gradient(to bottom, #000 0 2px, rgb(0, 0, 0 / 0) 2px 4px),
+    --text-shadow: rgba(0, 0, 0, 1);
+    --background-image: repeating-linear-gradient(to right, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(to bottom, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
     linear-gradient(#007f0c, #004306);
 }
 
@@ -34,8 +43,9 @@
         --font-weight-heading: 785;
         --background-color: #000000;
         --accent-color: #00CC14;
-        --background-image: repeating-linear-gradient(to right, #000 0 2px, rgb(0, 0, 0 / 0) 2px 4px),
-        repeating-linear-gradient(to bottom, #000 0 2px, rgb(0, 0, 0 / 0) 2px 4px), 
+        --text-shadow: rgba(0, 0, 0, 1);
+        --background-image: repeating-linear-gradient(to right, #000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+        repeating-linear-gradient(to bottom, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), 
         linear-gradient(#007f0c, #004306);
     }
 }
