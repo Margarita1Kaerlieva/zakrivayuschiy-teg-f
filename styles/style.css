@@ -72,15 +72,14 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
+A
 .theme-menu__button::after {
   content: '';
   display: block;
   position: absolute;
-  transform: scaleX(0);
   background: currentColor;
-  transition: transform 0.5s ease;
   transform-origin: left;
+  animation: underline 0.5s ease;
 }
 
 .theme-menu__button:focus {
@@ -89,7 +88,7 @@
 }
 
 .theme-menu__button:focus-visible::after {
-  transform: scaleX(1) 0.5s ease-in-out;
+  animation: underline 0.5s ease-in-out;
 }
 
 .theme-menu__button:hover {
@@ -100,14 +99,13 @@
   opacity: 0.6;
   cursor: default;
   pointer-events: none;
-  /* position: relative;  */
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
   inset-inline-start: -13px;
-  animation: moving 0.5 ease-in-out infinite alternate;
+  animation: moving 0.5s ease-in-out infinite alternate;
 }
 
 /*  */
@@ -221,7 +219,7 @@
   content: "";
   position: absolute;
   background-color: var(--accent-color);
-  transition: 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;

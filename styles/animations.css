@@ -100,3 +100,12 @@
       inset-inline-start: -9px;
     }
   } 
+
+  @keyframes underline {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
