@@ -72,14 +72,17 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-A
+
 .theme-menu__button::after {
   content: '';
   display: block;
   position: absolute;
   background: currentColor;
   transform-origin: left;
-  animation: underline 0.5s ease;
+  transition: all 0.5s ease;
+  inline-size: 100%;
+  block-size: 3px;
+  transform: scale(0);
 }
 
 .theme-menu__button:focus {
@@ -88,7 +91,8 @@ A
 }
 
 .theme-menu__button:focus-visible::after {
-  animation: underline 0.5s ease-in-out;
+  animation: underline 0.5s ease-in-out forwards;
+  transform: scale(1);
 }
 
 .theme-menu__button:hover {
@@ -163,7 +167,7 @@ A
   display: grid;
   gap: 27px;
   font-size: 18px;
-  padding: 27px 0 21px 25px;
+  padding: 27px 23px 21px 25px;
   font-weight: var(--font-weight-text);
 }
 
@@ -171,19 +175,20 @@ A
   display: flex;
   justify-content: end;
   align-items: center;
-  margin: 4px 25px 21px 0;
+  margin: 4px 25px 23px 0;
 }
 
 .card__icon-button {
   position: relative;
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
+  block-size: 38px;
   background-color: transparent;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: border 0.3s ease;
-  z-index: 1;
+  transition: 0.3s ease;
+  outline: none;
 }
 
 .card__icon-button:focus{
@@ -191,17 +196,24 @@ A
 }
 
 .card__icon-button:focus-visible {
-  border-color: 2 px solid var(--accent-color);
+  border-color: 2px solid var(--accent-color);
 }
 
 .button__text {
   font-family: var(--font-family-new);
   font-size: 14px;
-}
+  position: relative;
+  z-index: 2;
+  color: var(--text-color);
+  mix-blend-mode: difference;
+  }
 
 .card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 34px;
   border: 2px solid var(--accent-color);
-  padding: 7px 34px;
   background-color: var(--background-color);
   cursor: pointer;
   position: relative; 
@@ -219,7 +231,7 @@ A
   content: "";
   position: absolute;
   background-color: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;
@@ -261,6 +273,10 @@ A
   filter: hue-rotate(76deg);
 }
 
+/*  */
+
+
+
 @media (width <= 375px) {
   .header__theme-menu {
     margin-block: 24px;
@@ -274,6 +290,10 @@ A
   .hard-light {
     inset-block-start: 22px;
     inset-inline-end: 11px;
+  }
+
+  .paragraph {
+    padding: 23px 0 44px 25px;
   }
 }
 
