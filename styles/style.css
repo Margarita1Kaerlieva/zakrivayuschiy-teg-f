@@ -53,7 +53,7 @@
 
 .header__theme-menu {
   font-size: var(--font-text);
-  margin: 16px 0 23px 19px;
+  margin: 16px 0 24px 19px;
 }
 
 .theme-menu__list {
@@ -119,18 +119,24 @@
   justify-items: center;
 }
 
+.card {
+  border-block-end: 2px solid var(--accent-color);
+}
+
+.cards {
+  display: grid;
+  gap: 50px;
+}
+
 .cards-item {
-  max-inline-size: 698px;
+  max-inline-size: 700px;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  margin-block-end: 50px;
-  font-family: var(--font-family);
 }
 
 .cards-title {
-  margin: 6px 9px;
+  padding: 5px 9px;
   font-size: 18px;
-  font-weight: var(--font-weight-heading);
 }
 
 .cards_img {
@@ -142,8 +148,7 @@
 
 .mix {
   position: relative;
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
+  outline: 2px solid var(--accent-color);
 }
 
 .hard-light {
@@ -151,7 +156,7 @@
   font-family: var(--font-family-new);
   font-size: 14px;
   position: absolute;
-  inset-block-start: 24px;
+  inset-block-start: 25px;
   inset-inline-end: 25px;
   mix-blend-mode: hard-light;
   opacity: 50%;
@@ -159,36 +164,29 @@
   text-shadow: 0 0 1px var(--text-shadow);
 }
 
-.hard {
-  text-transform: uppercase;
-}
-
 .paragraph {
   display: grid;
   gap: 27px;
   font-size: 18px;
-  padding: 27px 23px 21px 25px;
-  font-weight: var(--font-weight-text);
+  padding: 27px 25px 22px 25px;
 }
 
 .likes {
   display: flex;
   justify-content: end;
   align-items: center;
-  margin: 4px 25px 23px 0;
+  margin: 4px 26px 24px 0;
+  gap: 5px;
 }
 
 .card__icon-button {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   block-size: 38px;
   background-color: transparent;
   cursor: pointer;
   border: 2px solid transparent;
   transition: 0.3s ease;
-  outline: none;
+  padding: 0;
 }
 
 .card__icon-button:focus{
@@ -212,7 +210,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 34px;
+  inline-size: 128px;
+  block-size: 38px;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
   cursor: pointer;
@@ -236,7 +235,6 @@
   transform-origin: left;
   inline-size: 100%;
   block-size: 100%;
-
 }
 
 .card__like-button:hover::before {
@@ -275,7 +273,55 @@
 
 /*  */
 
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 50px;
+  margin-block-end: 100px;
+}
 
+.footer_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+  block-size: 55px;
+  inline-size: 335px;
+}
+
+.footer_button::before {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  transition: 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.footer_button:hover::before {
+  transform: scaleX(1);
+}
+
+.footer_img {
+  color: var(--text-color);
+  mix-blend-mode: difference;
+}
+
+.dialog-text {
+  font-family: var(--font-family-new);
+  font-size: 14px;
+}
+
+.dialog-button {
+  inline-size: 293px;
+  block-size: 38px;
+
+}
 
 @media (width <= 375px) {
   .header__theme-menu {
@@ -288,12 +334,20 @@
   }
 
   .hard-light {
-    inset-block-start: 22px;
+    inset-block-start: 24px;
     inset-inline-end: 11px;
   }
 
   .paragraph {
-    padding: 23px 0 44px 25px;
+    padding: 28px 26px 21px 25px;
+  }
+
+  .cards-title {
+    padding:  4px 10px;
+  } 
+
+  .cards {
+    gap: 52px;
   }
 }
 
