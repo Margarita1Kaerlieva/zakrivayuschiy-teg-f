@@ -203,8 +203,8 @@
   position: relative;
   z-index: 2;
   color: var(--text-color);
-  mix-blend-mode: difference;
-  }
+  mix-blend-mode: difference;  
+}
 
 .card__like-button {
   display: flex;
@@ -244,7 +244,7 @@
 /*  */
 
 .cards_decor {
-  filter: grayscale(0.7);
+  filter: saturate(150%) grayscale(0.8);
 }
 
 .cards_search {
@@ -252,7 +252,7 @@
 }
 
 .cards_type {
-  filter: hue-rotate(34deg);
+  filter: hue-rotate(34deg) contrast(0.8);
 }
 
 .cards_style {
@@ -290,6 +290,7 @@
   background-color: var(--background-color);
   block-size: 55px;
   inline-size: 335px;
+  gap: 3px;
 }
 
 .footer_button::before {
@@ -307,20 +308,51 @@
   transform: scaleX(1);
 }
 
+.footer-text {
+  padding: 2px 0 0 6px;
+}
+
 .footer_img {
   color: var(--text-color);
   mix-blend-mode: difference;
+  max-width: 21px;
+  height: auto;
+}
+
+.dialog[open] {
+  border: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  max-inline-size: 357px;
+  background-color: var(--background-color);
+  padding: 30px;
+}
+
+.dialog-modal {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.dialog_img {
+  max-width: 39px;
+  height: auto;
+  color: var(--accent-color);
 }
 
 .dialog-text {
   font-family: var(--font-family-new);
   font-size: 14px;
+  color: var(--accent-color);
+  line-height: 21px;
 }
 
 .dialog-button {
-  inline-size: 293px;
-  block-size: 38px;
+  inline-size: 100%;
+}
 
+.dialog::backdrop {
+  background-color: rgba(0 0 0 / 0.7);
 }
 
 @media (width <= 375px) {
@@ -343,12 +375,19 @@
   }
 
   .cards-title {
-    padding:  4px 10px;
+    padding: 5px 10px;
   } 
 
-  .cards {
-    gap: 52px;
+  .footer_button {
+    flex-direction: column;
+    gap: 8px;
+    max-inline-size: 310px;
+    min-block-size: 84px;
   }
+
+  .footer_img {
+    max-width: 28px;
+}
 }
 
 @supports((text-stroke: 1px var(--text-shadow)) or (-webkit-text-stroke: var(--text-shadow))) {
