@@ -81,6 +81,7 @@
 
 .is-liked .heart {
     animation: heart 0.1s ease-in;
+    transform-origin: 50% 50%;
 }
 
 .is-liked .sparks {

@@ -51,7 +51,7 @@
   font-size: var(--font-text);
 }
 
-.header__theme-menu {
+.theme-menu {
   font-size: var(--font-text);
   margin: 16px 0 24px 19px;
 }
@@ -119,10 +119,6 @@
   justify-items: center;
 }
 
-.card {
-  border-block-end: 2px solid var(--accent-color);
-}
-
 .cards {
   display: grid;
   gap: 50px;
@@ -134,16 +130,13 @@
   background-color: var(--background-color);
 }
 
+.card {
+  border-block-end: 2px solid var(--accent-color);
+}
+
 .cards-title {
   padding: 5px 9px;
   font-size: 18px;
-}
-
-.cards_img {
-  inline-size: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
 }
 
 .mix {
@@ -162,6 +155,14 @@
   opacity: 50%;
   z-index: 1;
   text-shadow: 0 0 1px var(--text-shadow);
+}
+
+.cards_img {
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
 }
 
 .paragraph {
@@ -195,15 +196,6 @@
 
 .card__icon-button:focus-visible {
   border-color: 2px solid var(--accent-color);
-}
-
-.button__text {
-  font-family: var(--font-family-new);
-  font-size: 14px;
-  position: relative;
-  z-index: 2;
-  color: var(--text-color);
-  mix-blend-mode: difference;  
 }
 
 .card__like-button {
@@ -241,6 +233,15 @@
   transform: scaleX(1);
 }
 
+.button__text {
+  font-family: var(--font-family-new);
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+  color: var(--text-color);
+  mix-blend-mode: difference;  
+}
+
 /*  */
 
 .cards_decor {
@@ -273,14 +274,14 @@
 
 /*  */
 
-.footer {
+.save {
   display: flex;
   justify-content: center;
   margin-block-start: 50px;
   margin-block-end: 100px;
 }
 
-.footer_button {
+.save_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,11 +290,11 @@
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
   block-size: 55px;
-  inline-size: 335px;
+  min-inline-size: 335px;
   gap: 3px;
 }
 
-.footer_button::before {
+.save_button::before {
   content: "";
   position: absolute;
   background-color: var(--accent-color);
@@ -304,20 +305,30 @@
   block-size: 100%;
 }
 
-.footer_button:hover::before {
+.save_button:hover::before {
   transform: scaleX(1);
 }
 
-.footer-text {
-  padding: 2px 0 0 6px;
+.save_button:focus {
+  outline: none;
 }
 
-.footer_img {
+.save_button:focus-visible{
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
+
+.save_img {
   color: var(--text-color);
   mix-blend-mode: difference;
   max-width: 21px;
   height: auto;
 }
+
+.save-text {
+  padding: 2px 0 0 6px;
+}
+
+/*  */
 
 .dialog[open] {
   border: 2px solid var(--accent-color);
@@ -352,7 +363,7 @@
 }
 
 .dialog::backdrop {
-  background-color: rgba(0 0 0 / 0.7);
+  background-color: rgba(0 0 0 / 0.75);
 }
 
 @media (width <= 375px) {
